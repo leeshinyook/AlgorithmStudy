@@ -98,3 +98,39 @@
 
 - 예시
   - 수열정렬`<문제명>` #정렬<`알고리즘`>
+
+
+
+## Comments
+
+> 다른사람이 짠 코드를 한 눈에 알아보기 쉽지않다. 
+>
+> 반드시, 코드마다 주석을 달아주세요.
+
+- 예
+
+~~~c++
+// 피보나치수열
+#include <iostream>
+
+#define FASTSTD ios::sync_with_stdio(0)
+#define FASTCIN cin.tie(0)
+using namespace std;
+
+int main() {
+    FASTSTD;
+    FASTCIN;
+    int dp[51]; 
+    dp[0] = 1; 
+    dp[1] = 1;// 1 일때,
+    dp[2] = 3;// 2 일때,
+    for(int i = 3; i < 51; i++) {
+        dp[i] = (dp[i - 1] + dp[i - 2] + 1) % 1000000007; // 피보나치수의 점화식
+    } // 메모이제이션
+    int n;
+    cin >> n;
+    cout << dp[n];
+    return 0;
+} 
+~~~
+

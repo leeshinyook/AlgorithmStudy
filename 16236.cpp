@@ -47,4 +47,4 @@ int bfs(&dis, int x, int y, int size)
         }
     }
     cout<<bfs(x,y,n,2);
-}
+} 
